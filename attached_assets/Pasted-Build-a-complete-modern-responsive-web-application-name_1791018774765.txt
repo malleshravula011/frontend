@@ -1,0 +1,63 @@
+Build a complete, modern, responsive web application named CommuteSync AI — an Intelligent Carpooling & Employee Commute Platform for a college hackathon. I need a working application, not just a landing page or static mockup. Prioritize free tools, demo data, and low resource usage. Do not use paid APIs or services requiring a credit card.
+
+TECH STACK:
+Use React, TypeScript, Vite, Tailwind CSS, React Router, Lucide icons, Recharts, and Leaflet with OpenStreetMap if compatible with the project. Use reusable components and a clean folder structure. Use localStorage as the initial data store. Do not add a backend or complex dependencies unless genuinely needed. If the environment has an existing project, inspect it first and preserve working code.
+
+DESIGN:
+Create a premium, professional mobility dashboard. Use a dark navy sidebar, white and light-gray backgrounds, emerald green primary buttons, rounded cards, subtle shadows, clean typography, responsive tables, accessible colors, and smooth but lightweight transitions. Use realistic fictional data from Hyderabad, including Gachibowli, Hitech City, Madhapur, Kondapur, and Kukatpally.
+
+1. LANDING PAGE:
+Create a complete public homepage with navigation, logo, hero title “Smarter Commutes. Shared Journeys.”, subtitle explaining employee carpooling, Find a Ride and Offer a Ride buttons, visual illustration of shared commuting, feature cards, How It Works, sustainability benefits, sample statistics, FAQs, testimonials, and footer. All buttons must navigate to relevant pages.
+
+2. DEMO LOGIN AND ROLE SELECTION:
+Create a login page and a role selector with Employee/Passenger, Driver, and Admin. Allow demo login without real credentials. Add a visible DEMO MODE label. Provide easy role switching for hackathon testing. Do not claim authentication is production-secure.
+
+3. EMPLOYEE DASHBOARD:
+Create a personalized dashboard with upcoming rides, money saved, shared distance, estimated CO2 savings, quick actions, notifications, recent trips, and recommended rides. Include a ride search form with origin, destination, date, departure time, passenger count, and preferences.
+
+4. RIDE SEARCH AND MATCHING:
+Display available ride cards with driver name and avatar, vehicle, rating, departure time, pickup location, available seats, estimated price, distance, detour, and match percentage. Add filters for time, price, seats, vehicle, and maximum detour. Use a simple transparent rule-based matching score based on route similarity, time compatibility, seat availability, and pickup distance. Explain why each ride matches. Do not claim a real AI model is connected.
+
+5. DRIVER DASHBOARD:
+Build a completely separate driver dashboard. Include trips offered, pending passenger requests, confirmed passengers, completed trips, and estimated cost-sharing totals. Create an Offer Ride form with origin, destination, date, departure time, seats, vehicle information, price per passenger, pickup points, route preferences, and notes. Show incoming requests with passenger information, pickup point, requested seats, and Accept/Reject buttons. Add driver trip history and vehicle/profile management.
+
+6. TRIP MANAGEMENT:
+Create a ride details page showing the route, driver, passengers, departure time, pickup and drop-off locations, seat count, cost breakdown, and trip status timeline. Add driver actions: Start Trip, Arrived at Pickup, Passenger Picked Up, Complete Trip, and Cancel Trip. Add passenger actions: Request to Join, Cancel Request, and View Trip. Use statuses Open, Requested, Confirmed, In Progress, Completed, and Cancelled. Only allow valid status transitions.
+
+7. MAPS:
+Use Leaflet and OpenStreetMap without paid map API keys. Show origin and destination markers, route visualization, pickup points, and ride locations. If real route calculations are unavailable, show a clearly labeled illustrative route and estimated distance. Any simulated movement must have a visible DEMO MODE label. Never pretend simulated data is real GPS tracking.
+
+8. NOTIFICATIONS AND REPLANNING:
+Create an in-app notification center for ride requests, accept/reject decisions, cancellations, upcoming departures, pickup updates, delays, and alternative routes. Allow notifications to be marked as read. Use simulated demo events and label them appropriately.
+
+9. COST SHARING AND SUSTAINABILITY:
+Show estimated fuel cost, toll estimate, cost per passenger, money saved compared with individual travel, shared kilometers, and illustrative CO2 savings. Allow drivers to configure cost sharing. Label estimates as illustrative and show the calculation assumptions. Add ride history and savings charts.
+
+10. ADMIN DASHBOARD:
+Create an admin-only layout with demo user counts, active rides, completed rides, pending requests, cancellations, shared kilometers, and estimated emissions saved. Add charts with Recharts, ride management, user management, driver verification status, reported issues, search, filters, and status badges. Include useful empty states and working navigation.
+
+11. PROFILE AND SETTINGS:
+Create profile editing, home/work locations, commute preferences, accessibility preferences, luggage preferences, notification settings, privacy controls, emergency contact form, and vehicle settings. Keep personal information private in the interface.
+
+12. SHARED DATA AND FUNCTIONALITY:
+Use shared TypeScript models and a single source of truth for users, drivers, vehicles, rides, passenger requests, notifications, and trip statuses. When a driver creates a ride, it must appear in employee ride search. When an employee requests a seat, the request must appear in the corresponding driver's dashboard. Accepting or rejecting a request must update the employee dashboard. Starting, completing, or cancelling a trip must update all relevant pages. Persist data in localStorage so refreshing does not erase changes. Seed fictional demo accounts and rides. Add a reset demo data button in settings.
+
+13. INTERACTION REQUIREMENTS:
+Implement working forms, input validation, search, filters, sorting, navigation, modals, status badges, notifications, confirmation dialogs, toast messages, and responsive mobile navigation. Avoid dead buttons and fake links. Use sensible loading, error, empty, and success states. Add realistic fictional data rather than lorem ipsum.
+
+14. FREE-FIRST TECHNICAL LIMITS:
+Do not use paid Google Maps APIs, paid AI APIs, paid geocoding, paid notification providers, or external services requiring billing. Use local demo data, localStorage, and OpenStreetMap where possible. Keep routing and data services replaceable so a real backend can be added later. Avoid unnecessary packages, huge generated assets, and complex animations. Do not create real GPS tracking or real-time capabilities that do not exist.
+
+15. IMPLEMENTATION AND TESTING:
+First inspect the environment, create a short implementation plan, and then build the actual application. Do not stop after generating a landing page. Complete the main pages and core workflow. Run the development server and resolve compilation errors. Verify the following demo flow:
+- Login as an employee.
+- Search for an available ride.
+- Request a seat.
+- Switch to the matching driver.
+- Accept or reject the request.
+- Switch back to the employee and confirm the updated status.
+- Start the trip, update pickup status, and complete or cancel it.
+- Confirm the updated state appears on all relevant pages and persists after refresh.
+- Verify that the admin dashboard reflects changes.
+
+If the application is too large for one generation, implement it in phases while preserving existing work. Do not rebuild the entire project when making changes. First prioritize the working UI and core ride workflow, then complete secondary features. Before finishing, summarize what is implemented and any remaining limitations honestly.

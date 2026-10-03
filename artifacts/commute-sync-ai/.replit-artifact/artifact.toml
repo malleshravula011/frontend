@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CommuteSync AI"
+description = "A responsive employee commute and carpool demo for teams in Hyderabad, with employee, driver, and admin views and shared ride workflows."
+version = "1.0.0"
+id = "artifacts/commute-sync-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21055
+
+[services.development]
+run = "pnpm --filter @workspace/commute-sync-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/commute-sync-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/commute-sync-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21055"
+BASE_PATH = "/"
